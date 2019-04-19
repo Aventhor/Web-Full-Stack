@@ -17,5 +17,17 @@ export class DashboardComponent implements OnInit {
   getBooks(): void {
     this.bookService.getBooks().subscribe(books => this.books = books);
   }
+  add(name: string, author: string) {
+    name = name.trim();
+    author = author.trim();
+    if(!name && !author) {
+      return;
+    }
+    this.bookService.addBook({ name } as Book).subscribe(book => {this.books.push(book)});
+  }
+  delete(book: Book): void {
+    this.books = this.books.filter(h => h !== book);
+    this.bookService.deleteBook(book).subscribe();
+  }
 
 }

@@ -14,8 +14,14 @@ export class BookService {
 
   constructor(private http: HttpClient) { }
 
-  getBooks(): Observable<Book[]> {   
+  getBooks(): Observable<Book[]> {
     console.log('worked!');
-    return this.http.get<Book[]>('http://localhost:3000/api/dashboard')
+    return this.http.get<Book[]>('/api/dashboard/')
+  }
+  addBook(book: Book): Observable<Book> {
+    return this.http.post<Book>('/api/dashboard/', book, httpOptions);
+  }
+  deleteBook(book: Book): Observable<Book> {
+    return this.http.delete<Book>("/api/dashboard", httpOptions);
   }
 }

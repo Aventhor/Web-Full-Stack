@@ -6,7 +6,7 @@ var books = [
     { name: 'What is love?', author: 'Ann Leen' }
 ];
 
-router.get('/dashboard', function(req, res, next) {
+router.get('/', function(req, res, next) {
     res.send(books);
     console.log("hello there!")
     
