@@ -13,7 +13,7 @@
     background-color: #323241;
 }
 .book-summary:hover > a h2 {
-    color: #e2bc23;
+    color: #dba50e;
 }
 img {
     margin: 1rem 0;
@@ -21,7 +21,7 @@ img {
 hr {
     width: 0.2rem;
     height: 30px;
-    background-color: #e2bc23;
+    background-color: #dba50e;
     float: left;
     margin-right: 1rem;
     margin-top: 0;

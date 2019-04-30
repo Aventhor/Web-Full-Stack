@@ -4,3 +4,14 @@
 .navbar-brand {
     color: #fff;
 }
+.navbar-toggler-icon {
+    color: #fff;
+}
+.nav-link{
+    color: #959ec9 !important;
+    transition: 0.2s;
+}
+.nav-link:hover {
+    text-decoration: none;
+    color: #dba50e !important;
+}

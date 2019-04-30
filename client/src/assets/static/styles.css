@@ -25,15 +25,20 @@ a{
 }
 a:hover {
     text-decoration: none;
-    color: #e2bc23;
+    color: #dba50e;
 }
 button, .btn {
-    background-color: #e4b514;
-    border: 1px solid #cd9f00;
+    /* background-color: #e4b514; */
+    background-color: #dba50e;
     border-radius: 5px;
+    /* color: #282a36; */
     color: #fff;
+    font-weight: 700;
     transition: 0.2s;
+    padding: 0.4rem 1rem;
 }
-button:hover {
-    background-color: #cd9f00;
+button:hover, .btn:hover {
+    background-color: rgb(173, 128, 2);
+    /* color: #282a36; */
+    color: #fff;
 }

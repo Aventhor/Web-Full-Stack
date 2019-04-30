@@ -20,6 +20,9 @@ export class BookService {
   getBook(id: number): Observable<Book> {
     return this.http.get<Book>('/api/books/' + id);
   }
+  getRandomBooks(): Observable<Book[]> {
+    return this.http.get<Book[]>('/api/dashboard/random/');
+  }
   addBook(book: Book): Observable<Book> {
     return this.http.post<Book>('/api/dashboard/', book, httpOptions);
   }

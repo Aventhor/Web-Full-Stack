@@ -1,0 +1,20 @@
+.book-control {
+    margin: 2rem 0;
+    padding: 1rem 1rem;
+    border-radius: 15px;
+    background-color: #21222c;
+}
+button {
+    margin: 0 0.3rem;
+    
+}
+button:hover {
+    padding: 0.4rem 1.5rem;
+}
+.book-control h2 {
+    margin: 0;
+    padding: 0.4rem 0;
+}
+#add {
+    border: 0.1rem solid #dba50e; 
+}

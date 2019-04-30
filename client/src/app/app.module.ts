@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ControlPanelComponent } from './control-panel/control-panel.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     DashboardComponent,
     BookDetailComponent,
     NotFoundComponent,
-    NavbarComponent
+    NavbarComponent,
+    ControlPanelComponent
   ],
   imports: [
     BrowserModule,

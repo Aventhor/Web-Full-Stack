@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-7 col-12 mx-auto my-4">
+      <h1 class="text-center">Список книг</h1>
+      <div class="book-control text-center" id="add">
+          <button class="btn">Добавить</button>
+      </div>
+      <div class="book-control" *ngFor="let book of books">
+        <form class="form-inline my-2 my-lg-0">
+          <h2>{{book.name}}</h2>
+          <button class="btn ml-auto">Изменить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

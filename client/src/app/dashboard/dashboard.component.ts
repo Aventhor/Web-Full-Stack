@@ -9,13 +9,18 @@ import { Book } from '../book';
 })
 export class DashboardComponent implements OnInit {
   books: Book[];
+  rBooks: Book[];
   constructor(private bookService: BookService) { }
 
   ngOnInit() {
-    this.getBooks();
+    this.getAllBooks();
+    this.getRandomBooks();
   }
-  getBooks(): void {
+  getAllBooks(): void {
     this.bookService.getBooks().subscribe(books => this.books = books);
+  }
+  getRandomBooks(): void {
+    this.bookService.getRandomBooks().subscribe(books => this.rBooks = books);
   }
   add(name: string, author: string) {
     name = name.trim();
