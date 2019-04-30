@@ -1,16 +1,16 @@
-<h1>Dashboard</h1>
-<div>
-  <label>Book Name
-    <input #bookName />
-    Author
-    <input #author />
-  </label>
-  <button (click)="add(bookName.value, author.value); bookName.value=''; author.value=''">Add</button>
+<div class="container">
+  <div class="row">
+    <h1 class="text-uppercase"><hr>Лучшие книги за месяц</h1>
+    <div class="shelf col-12">
+      <div *ngFor="let book of books" class="col-3 book-summary">
+        <a routerLink="/books/{{book.id}}">
+          <div class="text-center">
+            <img src="https://images.penguinrandomhouse.com/cover/9780307806581" class="w-50">
+            <a routerLink="/books/{{book.id}}"><h2>{{book.name}}</h2></a>
+            <h3>{{book.author}}</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
-<ul>
-  <li *ngFor="let book of books">
-    <h1><a routerLink="/detail/{{book.id}}">{{book.name}}</a></h1>
-    <h2>{{book.author}}</h2>
-    <button (click)="delete(book)">Delete</button>
-  </li>
-</ul>

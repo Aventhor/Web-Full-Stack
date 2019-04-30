@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,500,700&subset=cyrillic-ext');
+
+body {
+    background-color: #282a36;
+    font-family: "Comfortaa";
+    color: #fff;
+    margin-top: 5rem;
+}
+h1 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0.2rem 0rem; 
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 18px;
+    color: #fff;
+}
+a{
+    color: #959ec9;
+    transition: 0.2s;
+}
+a:hover {
+    text-decoration: none;
+    color: #e2bc23;
+}
+button, .btn {
+    background-color: #e4b514;
+    border: 1px solid #cd9f00;
+    border-radius: 5px;
+    color: #fff;
+    transition: 0.2s;
+}
+button:hover {
+    background-color: #cd9f00;
+}

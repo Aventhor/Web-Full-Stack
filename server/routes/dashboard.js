@@ -1,15 +1,18 @@
 var express = require('express');
+var pool = require('../db');
 var router = express.Router();
 
-var books = [
-    { name: 'Anything', author: 'Jonh Wick' },
-    { name: 'What is love?', author: 'Ann Leen' }
-];
 
-router.get('/', function(req, res, next) {
-    res.send(books);
-    console.log("hello there!")
+router.get('/', async(req, response, next) => {
+    response.setHeader("Content-Type", "application/json");
+    const resp = await pool.query('SELECT * FROM public.books', (err, result) => {
+        if(err){
+            console.log(err.stack);
+        } 
+        response.status(200).send(result.rows)
+    })
     
+
 });
 
 module.exports = router;

@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
   add(name: string, author: string) {
     name = name.trim();
     author = author.trim();
-    if(!name && !author) {
+    if(!name || !author) {
       return;
     }
     this.bookService.addBook({ name } as Book).subscribe(book => {this.books.push(book)});

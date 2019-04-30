@@ -1,0 +1,29 @@
+.shelf {
+    background-color: #21222c;
+    border-radius: 15px;
+    padding: 0;
+}
+.book-summary {
+    border-radius: 15px;
+    padding: 1rem 0;
+    display: inline-block;
+    transition: 0.2s;
+}
+.book-summary:hover {
+    background-color: #323241;
+}
+.book-summary:hover > a h2 {
+    color: #e2bc23;
+}
+img {
+    margin: 1rem 0;
+}
+hr {
+    width: 0.2rem;
+    height: 30px;
+    background-color: #e2bc23;
+    float: left;
+    margin-right: 1rem;
+    margin-top: 0;
+    border-radius: 0.5rem;
+}
