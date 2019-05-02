@@ -26,10 +26,9 @@ export class NewBookComponent implements OnInit {
     var img = img;
     var newBook = new Book(name, author, img, description, price);
     console.log(newBook.author);
-    this.bookService.addBook(newBook).subscribe();
-    this.goBack();
+    this.bookService.addBook(newBook).subscribe(() => this.goBack());
   }
   goBack(): void {
-    this.location.go('/panel')
+    this.location.back()
   }
 }

@@ -11,7 +11,7 @@ import { Location } from '@angular/common';
 })
 export class PanelEditComponent implements OnInit {
 
-  @Input() book: Book;
+   book: Book;
   id = +this.route.snapshot.paramMap.get('id');
   constructor(
     private bookService: BookService,
@@ -29,11 +29,10 @@ export class PanelEditComponent implements OnInit {
     this.bookService.deleteBook(this.id).subscribe(() => this.goBack());
   }
   edit(): void {
-    this.bookService.updateBook(this.book, this.id).subscribe();
-    this.goBack();
+    this.bookService.updateBook(this.book).subscribe(() => this.goBack());
   }
   goBack(): void {
-    this.location.go('/panel');
+    this.location.back();
   }
 
 }

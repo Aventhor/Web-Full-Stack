@@ -18,3 +18,6 @@ button:hover {
 #add {
     border: 0.1rem solid #dba50e; 
 }
+#item:hover > .book-control {
+    background-color: #323241;
+}

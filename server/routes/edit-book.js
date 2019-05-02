@@ -8,7 +8,6 @@ router.delete('/:id', async(req, response, next) => {
     const resp = await pool.query("DELETE FROM books WHERE id = " + id, 
     )
     .then(function (res) {
-        done()
         response.status(200)
         .json({
             status: 'success',
@@ -20,7 +19,7 @@ router.delete('/:id', async(req, response, next) => {
     });
     
 });
-router.put('/:id', async(req, response, next) => {
+router.put('/', async(req, response, next) => {
     var values = [
         req.body.name,
         req.body.author,
@@ -29,12 +28,11 @@ router.put('/:id', async(req, response, next) => {
         req.body.price,
     ];
     console.log(values);
-    var id = req.params.id;
+    var id = req.body.id;
     console.log(id);
     const resp = await pool.query("UPDATE books SET name = $1, author = $2, img = $3, description = $4, price = $5 WHERE id = $6", 
     [values[0], values[1], values[2], values[3], values[4], id])
     .then(function (res) {
-        done()
         response.status(200)
         .json({
             status: 'success',

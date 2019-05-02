@@ -32,8 +32,8 @@ export class BookService {
   deleteBook(id: number): Observable<Book> {
     return this.http.delete<Book>('/api/panel/edit/' + id, httpOptions);
   }
-  updateBook(book: Book, id: number): Observable<any> {
-    return this.http.put<Book>('/api/panel/edit/' + id, book, httpOptions);
+  updateBook(book: Book): Observable<any> {
+    return this.http.put<Book>('/api/panel/edit/', book, httpOptions);
   }
   searchBooks(term: string): Observable<Book[]> {
     if(!term.trim()) {

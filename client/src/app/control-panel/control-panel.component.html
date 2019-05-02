@@ -2,14 +2,20 @@
   <div class="row">
     <div class="col-lg-7 col-12 mx-auto my-4">
       <h1 class="text-center">Список книг</h1>
-      <div class="book-control text-center" id="add">
-          <a routerLink="new"><button class="btn">Добавить</button></a>
-      </div>
-      <div class="book-control" *ngFor="let book of books">
-        <form class="form-inline my-2 my-lg-0">
-          <h2>{{book.name}}</h2>
-          <a class="ml-auto" routerLink="/panel/edit/{{book.id}}"><button class="btn">Изменить</button></a>
-        </form>
+      <a id="item" routerLink="new">
+        <div class="book-control text-center" id="add">
+            <a routerLink="new"><button class="btn">Добавить</button></a>
+        </div>
+      </a>
+      <div *ngFor="let book of books">
+        <a id="item" routerLink="edit/{{book.id}}">
+          <div class="book-control">
+            <form class="form-inline my-2 my-lg-0">
+              <h2>{{book.name}}</h2>
+              <a class="ml-auto" routerLink="edit/{{book.id}}"><button class="btn">Изменить</button></a>
+            </form>
+          </div>
+        </a>
       </div>
     </div>
   </div>

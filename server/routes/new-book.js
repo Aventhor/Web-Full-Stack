@@ -14,7 +14,6 @@ router.post('/', async(req, response, next) => {
   const resp = await pool.query("INSERT INTO books (name, author, img, description, price) VALUES ($1, $2, $3, $4, $5);", 
   [values[0], values[1], values[2], values[3], values[4]])
   .then(function (res) {
-    done()
     response.status(200)
     .json(
       {status: 'success'}   

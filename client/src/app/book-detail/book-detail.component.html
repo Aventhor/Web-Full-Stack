@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="row">
-    <div class="col-8 offset-md-2 detail" *ngIf="book">
+  <div class="row" *ngIf="book">
+    <div class="col-8 offset-md-2 detail">
       <img src="{{book.img}}" height="212" width="190"/>
       <div class="info-block">
         <h1>{{book.name}}</h1>

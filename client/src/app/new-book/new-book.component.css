@@ -7,3 +7,6 @@
     margin: 2rem 0;
     padding: 1rem 0;
 }
+button:hover {
+    padding: 0.4rem 1.5rem;
+}
