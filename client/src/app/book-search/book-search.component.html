@@ -1,0 +1,9 @@
+<form class="form-inline my-2 my-lg-0">
+  <input class="form-control mr-sm-2" type="search" #searchBox placeholder="Введите название" aria-label="Search" (input)="search(searchBox.value)"/>
+    <ul class="search-result">
+      <li *ngFor="let book of books$ | async">
+        <a routerLink="/books/{{book.id}}">{{book.name}}</a>
+      </li>
+    </ul>
+  <button class="btn my-2 my-sm-0" type="submit">Найти</button>
+</form>

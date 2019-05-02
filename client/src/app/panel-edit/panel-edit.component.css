@@ -1,0 +1,5 @@
+@import url("../new-book/new-book.component.css");
+
+button {
+    margin: 0 1rem;
+}

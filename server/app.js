@@ -10,6 +10,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var dashRouter = require('./routes/dashboard');
 var bookRouter = require('./routes/book');
+var searchRouter = require('./routes/search');
+var newBook = require('./routes/new-book');
+var editBook = require('./routes/edit-book');
+var library = require('./routes/library');
 
 var app = express();
 // view engine setup
@@ -28,7 +32,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/dashboard', dashRouter);
+app.use('/api/search/', searchRouter);
 app.use('/api/books/', bookRouter);
+app.use('/api/panel/new/', newBook);
+app.use('/api/panel/edit/', editBook);
+app.use('/api/library/', library);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

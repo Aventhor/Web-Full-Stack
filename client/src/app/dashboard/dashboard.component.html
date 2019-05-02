@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
     <h1 class="text-uppercase"><hr>Лучшие книги за месяц</h1>
-    <div class="shelf col-12">
-      <div *ngFor="let book of books" class="col-6 col-lg-3 book-summary">
+    <div class="shelf col-12 d-lg-flex">
+      <div *ngFor="let book of books" class="col-12 col-md-6 col-lg-3 book-summary">
         <a routerLink="/books/{{book.id}}">
-          <div class="text-center">
-            <img src="https://images.penguinrandomhouse.com/cover/9780307806581" class="w-50">
+          <div class="text-center align-bottom">
+            <img src="{{book.img}}">
             <a routerLink="/books/{{book.id}}"><h2>{{book.name}}</h2></a>
             <h3>{{book.author}}</h3>
           </div>
@@ -13,16 +13,16 @@
       </div>
     </div>
     <h1 class="text-uppercase mt-5"><hr>Случайные</h1>
-    <div class="col-12 px-0">
-        <div *ngFor="let book of rBooks" class="col-6 col-lg-3 book-summary">
-          <a routerLink="/books/{{book.id}}">
-            <div class="text-center">
-              <img src="https://images.penguinrandomhouse.com/cover/9780307806581" class="w-50">
-              <a routerLink="/books/{{book.id}}"><h2>{{book.name}}</h2></a>
-              <h3>{{book.author}}</h3>
-            </div>
-          </a>
-        </div>
+    <div class="col-12 px-0 d-lg-flex">
+      <div *ngFor="let book of rBooks" class="col-12 col-md-6 col-lg-3 book-summary">
+        <a routerLink="/books/{{book.id}}">
+          <div class="text-center align-bottom">
+            <img src="{{book.img}}">
+            <a routerLink="/books/{{book.id}}"><h2>{{book.name}}</h2></a>
+            <h3>{{book.author}}</h3>
+          </div>
+        </a>
       </div>
+    </div>
   </div>
 </div>

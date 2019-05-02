@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BookDetailComponent implements OnInit {
 
-  book: Book;
+  @Input() book: Book;
 
   constructor(
     private bookService: BookService,
@@ -24,7 +24,7 @@ export class BookDetailComponent implements OnInit {
   }
   getBook(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.bookService.getBook(id).subscribe(book => { this.book = book; if(!book) this.location.go('/404')});
+    this.bookService.getBook(id).subscribe(book => { this.book = book; if(!this.book) this.location.go('/404')});
   }
   goBack(): void {
     this.location.back();

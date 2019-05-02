@@ -28,13 +28,11 @@ a:hover {
     color: #dba50e;
 }
 button, .btn {
-    /* background-color: #e4b514; */
     background-color: #dba50e;
     border-radius: 5px;
-    /* color: #282a36; */
     color: #fff;
     font-weight: 700;
-    transition: 0.2s;
+    transition: 0.2s linear;
     padding: 0.4rem 1rem;
 }
 button:hover, .btn:hover {

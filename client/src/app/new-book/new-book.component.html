@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-7 mx-auto col-12 my-4">
+      <h1 class="text-center">Новая книга</h1>
+      <form class='shelf'>
+        <div class="form-group row">
+          <label class="col-12 col-md-3 offset-md-1">Название</label>
+          <div class="col-12 col-md-7">
+            <input #name type="text" class="form-control"/>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-12 offset-md-1">Автор</label>
+          <div class="col-md-7 col-12">
+            <input type="text" class="form-control" #author>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-12 offset-md-1">Изображение</label>
+          <div class="col-md-7 col-12">
+            <input type="text" class="form-control" #img placeholder="Вставьте URL">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-12 col-md-3 offset-md-1">Описание</label>
+          <div class="col-12 col-md-7">
+            <textarea class="form-control" rows="4" #desc></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-12 col-md-3 offset-md-1">Цена</label>
+          <div class="col-12 col-md-7">
+              <input type="text" class="form-control" #price value='0'>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn mt-1 mb-3" (click)="add(name.value, author.value, img.value, desc.value, price.value); name.value=''" type="submit">Добавить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

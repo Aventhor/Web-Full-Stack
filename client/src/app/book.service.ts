@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders, HttpResponse, JsonpClientBackend } from '@angular/common/http';
 import { Book } from './book';
 
 const httpOptions = {
@@ -15,6 +15,9 @@ export class BookService {
   constructor(private http: HttpClient) { }
 
   getBooks(): Observable<Book[]> {
+    return this.http.get<Book[]>('/api/library/');
+  }
+  getPopularBooks(): Observable<Book[]> {
     return this.http.get<Book[]>('/api/dashboard/');
   }
   getBook(id: number): Observable<Book> {
@@ -24,9 +27,18 @@ export class BookService {
     return this.http.get<Book[]>('/api/dashboard/random/');
   }
   addBook(book: Book): Observable<Book> {
-    return this.http.post<Book>('/api/dashboard/', book, httpOptions);
+    return this.http.post<Book>('/api/panel/new/', book, httpOptions);
   }
-  deleteBook(book: Book): Observable<Book> {
-    return this.http.delete<Book>("/api/dashboard", httpOptions);
+  deleteBook(id: number): Observable<Book> {
+    return this.http.delete<Book>('/api/panel/edit/' + id, httpOptions);
+  }
+  updateBook(book: Book, id: number): Observable<any> {
+    return this.http.put<Book>('/api/panel/edit/' + id, book, httpOptions);
+  }
+  searchBooks(term: string): Observable<Book[]> {
+    if(!term.trim()) {
+      return of([]);
+    }
+    return this.http.get<Book[]>('/api/search/?name='+ term);
   }
 }

@@ -3,12 +3,12 @@ var router = express.Router();
 var pool = require('../db');
 
 
-router.get('/:id', async(req, response, next) => {
-    const resp = await pool.query('SELECT * FROM books WHERE id = ' + req.params.id)
+router.get('/', async(req, response, next) => {
+    const resp = await pool.query('SELECT * FROM books')
         .then(function (data) {
             response.status(200)
               .json(
-                data.rows[0],
+                data.rows,
               );
           })
           .catch(function (err) {

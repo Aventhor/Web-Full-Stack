@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <h1 class="text-uppercase"><hr>Библиотека</h1>
+    <div class="shelf col-12 d-flex flex-wrap">
+      <div *ngFor="let book of books" class="col-6 col-lg-3 book-summary">
+        <a routerLink="/books/{{book.id}}">
+          <div class="text-center align-bottom">
+            <img src="{{book.img}}" class="w-50">
+            <a routerLink="/books/{{book.id}}"><h2>{{book.name}}</h2></a>
+            <h3>{{book.author}}</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

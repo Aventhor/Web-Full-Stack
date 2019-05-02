@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-7 mx-auto col-12 my-4">
+      <h1 class="text-center">Редактирование</h1>
+      <form class='shelf'>
+        <div class="form-group row" *ngIf="book">
+          <label class="col-12 col-md-3 offset-md-1">Название</label>
+          <div class="col-12 col-md-7">
+            <input [(ngModel)]="book.name" #name name="name" type="text" class="form-control"/>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-12 offset-md-1">Автор</label>
+          <div class="col-md-7 col-12">
+            <input [(ngModel)]="book.author" #author name="author" type="text" class="form-control" />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-12 offset-md-1">Изображение</label>
+          <div class="col-md-7 col-12">
+            <input [(ngModel)]="book.img" name="img" type="text" class="form-control" #img />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-12 col-md-3 offset-md-1">Описание</label>
+          <div class="col-12 col-md-7">
+            <textarea [(ngModel)]="book.description" name="desc" class="form-control" rows="4" #desc></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-12 col-md-3 offset-md-1">Цена</label>
+          <div class="col-12 col-md-7">
+              <input [(ngModel)]="book.price" name="price" type="text" class="form-control" #price>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn mt-1 mb-3" (click)="edit()" type="submit">Сохранить</button>
+          <button class="btn mt-1 mb-3" (click)="delete(book)" type="submit">Удалить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

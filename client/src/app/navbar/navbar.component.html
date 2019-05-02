@@ -8,16 +8,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/">Библиотека</a>
+            <a class="nav-link" routerLink="/library">Библиотека</a>
           </li>
           <li class="nav-item active">
               <a class="nav-link" routerLink="/panel">Панель управления</a>
           </li>    
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Введите название" aria-label="Search">
-          <button class="btn my-2 my-sm-0" type="submit">Найти</button>
-        </form>
+        <app-book-search></app-book-search>
       </div>
     </div>
   </nav>
