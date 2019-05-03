@@ -7,6 +7,10 @@ body {
     color: #fff;
     margin-top: 5rem;
 }
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
 h1 {
     font-size: 30px;
     margin: 0;
@@ -19,7 +23,7 @@ h3 {
     font-size: 18px;
     color: #fff;
 }
-a{
+a {
     color: #959ec9;
     transition: 0.2s;
 }
@@ -37,6 +41,5 @@ button, .btn {
 }
 button:hover, .btn:hover {
     background-color: rgb(173, 128, 2);
-    /* color: #282a36; */
     color: #fff;
 }

@@ -5,7 +5,7 @@ var router = express.Router();
 
 router.get('/', async(req, response, next) => {
     response.setHeader("Content-Type", "application/json");
-    const resp = await pool.query('SELECT * FROM books LIMIT 4', (err, result) => {
+    const resp = await pool.query('SELECT * FROM books ORDER BY id DESC LIMIT 4', (err, result) => {
         if(err){
             console.log(err.stack);
         } 

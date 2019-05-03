@@ -13,6 +13,7 @@ import { LibraryComponent } from './library/library.component';
 import { BookSearchComponent } from './book-search/book-search.component';
 import { NewBookComponent } from './new-book/new-book.component';
 import { PanelEditComponent } from './panel-edit/panel-edit.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PanelEditComponent } from './panel-edit/panel-edit.component';
     LibraryComponent,
     BookSearchComponent,
     NewBookComponent,
-    PanelEditComponent
+    PanelEditComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
