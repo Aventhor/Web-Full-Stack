@@ -1,5 +1,39 @@
 @import url("../navbar/navbar.component.css");
 
-.search-result {
-    padding: 0;
+
+@media screen and (max-device-width: 990px) {
+    .search-result {
+        padding: 0;
+        position: fixed;
+        top: 11rem;
+    }
+}
+@media screen and (min-device-width: 991px) {
+    .search-result {
+        padding: 0;
+        position: absolute;
+        top: 3.1rem;
+    }
+}
+ul {
+    background-color: #21222c;
+}
+li {
+    width: 17rem;
+    padding: 1rem;
+}
+li:hover {
+    background-color: #282a36;
+}
+li:hover > a {
+    color: #dba50e;
+}
+input {
+    width: 17rem !important;
+}
+input[type="search"]:focus {
+    border: 0.1rem solid #dba50e;
+    box-shadow: none;
+    outline: 0;
+    transition: 0.2s;
 }

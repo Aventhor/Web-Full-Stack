@@ -27,10 +27,16 @@ hr {
     margin-top: 0;
     border-radius: 0.5rem;
 }
-@media screen and (device-width: 540px) {
+@media screen and (max-device-width: 540px) {
     img {
-        width: 100px;
+        width: 140px;
         height: 220px;
+    }
+}
+@media screen and (min-device-width: 541px) {
+    img {
+        width: 180px;
+        height: 270px;
     }
 }
 @media screen and (min-device-width: 1140px) {

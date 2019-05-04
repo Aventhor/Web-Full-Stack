@@ -28,5 +28,10 @@ export class BookSearchComponent implements OnInit {
 
   search(term: string): void {
     this.searchTerms.next(term);
+    console.log(term);
+  }
+  clearSearch(): void {
+    var books: Observable<Book[]>;
+    this.books$ = books;
   }
 }

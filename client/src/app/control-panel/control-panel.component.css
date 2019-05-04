@@ -8,9 +8,6 @@ button {
     margin: 0 0.3rem;
     
 }
-button:hover {
-    padding: 0.4rem 1.5rem;
-}
 .book-control h2 {
     margin: 0;
     padding: 0.4rem 0;
@@ -20,4 +17,7 @@ button:hover {
 }
 #item:hover > .book-control {
     background-color: #323241;
+}
+#item:hover > .book-control button {
+    padding: 0.4rem 1.5rem;
 }

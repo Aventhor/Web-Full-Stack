@@ -39,6 +39,6 @@ export class BookService {
     if(!term.trim()) {
       return of([]);
     }
-    return this.http.get<Book[]>('/api/search/?name='+ term);
+    return this.http.get<Book[]>('/api/search/?name=' + term);
   }
 }
