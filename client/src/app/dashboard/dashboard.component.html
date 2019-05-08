@@ -5,7 +5,7 @@
       <div *ngFor="let book of books" class="col-12 col-md-6 col-lg-3 book-summary">
         <a routerLink="/books/{{book.id}}">
           <div class="text-center align-bottom">
-            <img src="{{book.img}}">
+            <figure><img src="{{book.img}}"></figure>
             <a routerLink="/books/{{book.id}}"><h2>{{book.name}}</h2></a>
             <h3>{{book.author}}</h3>
           </div>
@@ -17,7 +17,7 @@
       <div *ngFor="let book of rBooks" class="col-12 col-md-6 col-lg-3 book-summary">
         <a routerLink="/books/{{book.id}}">
           <div class="text-center align-bottom">
-            <img src="{{book.img}}">
+            <figure><img src="{{book.img}}"></figure>
             <a routerLink="/books/{{book.id}}"><h2>{{book.name}}</h2></a>
             <h3>{{book.author}}</h3>
           </div>

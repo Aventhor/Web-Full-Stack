@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from '../book';
 import { BookService } from '../book.service';
 import { getAllDebugNodes } from '@angular/core/src/debug/debug_node';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-control-panel',
@@ -11,7 +12,12 @@ import { getAllDebugNodes } from '@angular/core/src/debug/debug_node';
 export class ControlPanelComponent implements OnInit {
 
   books: Book[];
-  constructor(private bookService: BookService) { }
+  constructor(
+    private bookService: BookService,
+    private titleService: Title,
+    ) {
+      this.titleService.setTitle("Панель управления");
+     }
 
   ngOnInit() {
     this.getAllBooks();

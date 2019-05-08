@@ -3,6 +3,7 @@ import { Book } from '../book';
 import { BookService } from '../book.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-panel-edit',
@@ -17,7 +18,10 @@ export class PanelEditComponent implements OnInit {
     private bookService: BookService,
     private route: ActivatedRoute,
     private location: Location,
-  ) { }
+    private titleService: Title,
+  ) {
+    this.titleService.setTitle("Редактирование книги");
+   }
 
   ngOnInit() {
     this.getBook();

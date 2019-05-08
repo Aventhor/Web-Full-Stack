@@ -3,6 +3,7 @@ import { Book } from '../book';
 import { BookService } from '../book.service';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-book-detail',
@@ -17,6 +18,7 @@ export class BookDetailComponent implements OnInit {
     private bookService: BookService,
     private location: Location,
     private route: ActivatedRoute,
+    private titleService: Title,
   ) { }
 
   ngOnInit() {
@@ -24,7 +26,11 @@ export class BookDetailComponent implements OnInit {
   }
   getBook(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.bookService.getBook(id).subscribe(book => { this.book = book; if(!this.book) this.location.go('/404')});
+    this.bookService.getBook(id).subscribe(book => { 
+      this.book = book;
+      this.titleService.setTitle(this.book.name); 
+      if(!this.book) this.location.go('/404')
+    });
   }
   goBack(): void {
     this.location.back();

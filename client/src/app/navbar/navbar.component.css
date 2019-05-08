@@ -4,6 +4,9 @@
 .navbar-brand {
     color: #fff;
 }
+.navbar-brand img {
+    margin-right: 1rem;
+}
 .navbar-toggler-icon {
     color: #fff;
 }

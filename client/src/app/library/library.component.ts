@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../book';
 import { BookService } from '../book.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-library',
@@ -12,7 +13,12 @@ import { BookService } from '../book.service';
 export class LibraryComponent implements OnInit {
 
   books: Book[];
-  constructor(private bookService: BookService) { }
+  constructor(
+    private bookService: BookService,
+    private titleService: Title,
+    ) { 
+      this.titleService.setTitle("Библиотека");
+    }
 
   ngOnInit() {
     this.getAllBooks();

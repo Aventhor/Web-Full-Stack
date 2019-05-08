@@ -7,7 +7,7 @@
     border-radius: 15px;
     padding: 1rem 0;
     display: inline-block;
-    transition: 0.2s;
+    transition: 0.2s linear;
 }
 .book-summary:hover {
     background-color: #323241;
@@ -15,8 +15,20 @@
 .book-summary:hover > a h2 {
     color: #dba50e;
 }
-img {
-    margin: 1rem 0;
+.book-summary:hover > a img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+figure {
+    overflow: hidden;
+    margin: 1rem auto;
+    border-radius: 5px;
+}
+.book-summary img {
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
 hr {
     width: 0.2rem;
@@ -32,15 +44,27 @@ hr {
         width: 140px;
         height: 220px;
     }
+    figure {
+        width: 140px;
+        height: 220px;
+    }
 }
 @media screen and (min-device-width: 541px) {
     img {
         width: 180px;
         height: 270px;
     }
+    igure {
+        width: 180px;
+        height: 270px;
+    }
 }
 @media screen and (min-device-width: 1140px) {
     img {
+        width: 150px;
+        height: 230px;
+    }
+    figure {
         width: 150px;
         height: 230px;
     }

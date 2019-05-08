@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Book } from '../book';
 import { BookService } from '../book.service';
 import { Location } from '@angular/common';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-new-book',
@@ -12,8 +13,11 @@ export class NewBookComponent implements OnInit {
 
   constructor(
     private bookService: BookService,
-    private location: Location
-  ) { }
+    private location: Location,
+    private titleService: Title,
+  ) {
+    this.titleService.setTitle("Добавление книги");
+   }
 
   ngOnInit() {
   }
