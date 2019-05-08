@@ -28,8 +28,12 @@ export class BookDetailComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.bookService.getBook(id).subscribe(book => { 
       this.book = book;
+      if(this.book) {
       this.titleService.setTitle(this.book.name); 
-      if(!this.book) this.location.go('/404')
+      }
+      else {
+        this.location.go('/404');
+      }
     });
   }
   goBack(): void {

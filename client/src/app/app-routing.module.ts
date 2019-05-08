@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   { path: 'books/:id', component: BookDetailComponent},
-  { path: 'library', component: LibraryComponent, data: {title: 'Библиотека'} },
+  { path: 'library', component: LibraryComponent },
   { path: 'panel', component: ControlPanelComponent },
   { path: 'panel/new', component: NewBookComponent },
   { path: 'panel/edit/:id', component: PanelEditComponent },
