@@ -1,10 +1,16 @@
 <div class="container">
   <div class="row">
+    <div class="col-12">
+      <div class="book-control">
+        <h1><hr>Панель управления</h1>
+        <p>Добавление, удаление и обновление книг</p>
+      </div>
+    </div>
     <div class="col-lg-7 col-12 mx-auto my-4">
       <h1 class="text-center">Список книг</h1>
       <a id="item" routerLink="new">
         <div class="book-control text-center" id="add">
-            <a routerLink="new"><button class="btn">Добавить</button></a>
+          <a routerLink="new"><button class="btn">Добавить</button></a>
         </div>
       </a>
       <div *ngFor="let book of books">

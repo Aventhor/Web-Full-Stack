@@ -5,6 +5,9 @@ img {
 h2 {
     color: #959ec9;
 }
+h1{
+    margin: 0;
+}
 .detail { 
     padding: 0;
     margin-top: 2rem;

@@ -21,3 +21,16 @@ button {
 #item:hover > .book-control button {
     padding: 0.4rem 1.5rem;
 }
+p {
+    margin: 0.5rem 0;
+    color: #959ec9;
+}
+hr {
+    width: 0.2rem;
+    height: 30px;
+    background-color: #dba50e;
+    float: left;
+    margin-right: 1rem;
+    margin-top: 0;
+    border-radius: 0.5rem;
+}
